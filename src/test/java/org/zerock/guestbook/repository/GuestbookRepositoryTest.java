@@ -70,7 +70,7 @@ class GuestbookRepositoryTest {
         QGuestbook qGuestbook = QGuestbook.guestbook;
         String keyword = "3";
 
-        BooleanBuilder builder = new BooleanBuilder();
+        BooleanBuilder builder = new BooleanBuilder(); //where문 사용할 때
         BooleanExpression exTitle = qGuestbook.title.contains(keyword);
         BooleanExpression exContent = qGuestbook.content.contains(keyword);
         BooleanExpression exAll = exTitle.or(exContent);
